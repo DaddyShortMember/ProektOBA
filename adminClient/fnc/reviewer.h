@@ -2,9 +2,16 @@
 #define REVIEWER_H_
 
 typedef struct{
-	char* name;
-	char* sur;
+	char* type;
+	float balance;
+}Account;
+
+typedef struct{
 	char* NIF;
+	int numAc;
+	float totalBal;
+	Account* accounts;
+	char* typeReq;
 }Client;
 
 typedef struct{
@@ -13,7 +20,7 @@ typedef struct{
 }List;
 
 List* getList();
-void submitResponse();
+void submitResponse(Client);
 void updateList();
 
 #endif
