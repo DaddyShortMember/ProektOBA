@@ -8,8 +8,8 @@ typedef struct{
 
 typedef struct{
 	char* NIF;
-	int numAc;
 	float totalBal;
+	int numAc;
 	Account* accounts;
 	char* typeReq;
 }Client;
@@ -20,6 +20,7 @@ typedef struct{
 }List;
 
 List* getList();
+Client reviewClient(List* lis, int sel);
 void submitResponse(Client);
 void updateList();
 
